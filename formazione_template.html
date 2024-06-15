@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Formazione Italia</title>
     <style>
         body, html {
@@ -80,6 +81,34 @@
         .footer-item img {
             margin-right: 10px;
         }
+        .fas{
+            margin-right: 10px; /* Aggiungi la quantità di spazio desiderata */
+
+        }
+        .address-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center; /* Centra il testo sotto l'icona */
+
+        }
+        .address-icon {
+            font-size: 2rem; /* Dimensiona l'icona in base alle tue esigenze */
+            margin-bottom: 5px; /* Spazio tra l'icona e il testo */
+
+        }
+        .email-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center; /* Centra il testo sotto l'icona */
+        }
+        .email-icon {
+            font-size: 2rem; /* Dimensiona l'icona in base alle tue esigenze */
+            margin-bottom: 5px; /* Spazio tra l'icona e il testo */
+        }
+
+
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -93,6 +122,22 @@
             .burger {
                 display: block;
             }
+
+            .logo {
+                display: block;
+                margin: 0 auto;
+                max-width: 240px; /* Dimensione del logo ridotta */
+                border-radius: 36%;
+            }
+
+            #email-text {
+                font-size: 0.6rem;
+             }
+     
+             #address-text{
+                 font-size: 0.6rem;
+             }
+     
         }
     </style>
 </head>
@@ -102,7 +147,6 @@
         <br>
         <div class="nav-container">
             <ul class="nav-links">
-                <li><a href="index.html">Home Page</a></li>
                 <li><a href="chi-siamo.html">Chi Siamo</a></li>
                 <li><a href="contatti.html">Contatti</a></li>
             </ul>
@@ -118,12 +162,19 @@
     </div>
     <footer>
         <div class="footer-item">
-            <img src="address-icon.png" alt="Indirizzo" width="20">
-            <span>Via della mia azienda, 1</span>
+            <div class="address-container">
+                <span class="fas fa-map-marker-alt address-icon"></span>
+                <br>
+                <span id="address-text">Via Salvo D'Acquisto n. 73,
+                    Aversa CE</span>
+            </div>    
         </div>
         <div class="footer-item">
-            <img src="email-icon.png" alt="Email" width="20">
-            <span>email@miaazienda.it</span>
+            <div class="email-container">
+                <span class="fas fa-envelope email-icon"></span>
+                <br>
+                <span id="email-text">formazioneitaliapro@gmail.com</span>
+            </div>    
         </div>
     </footer>
 

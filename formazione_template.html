@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formazione Italia</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #1C3D6D;
+            color: #F07D22;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto;
+        }
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        .nav-links li {
+            margin: 0 15px;
+        }
+        .nav-links a {
+            color: #F07D22;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .burger {
+            display: none;
+            cursor: pointer;
+            color: #F07D22;
+            justify-content: center;
+        }
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: #F07D22;
+            margin: 5px;
+        }
+        .content {
+            text-align: center;
+            margin: 50px 0;
+            color: #F07D22;
+            font-size: 24px;
+        }
+        footer {
+            background-color: #1C3D6D;
+            color: #F07D22;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+        .footer-item {
+            display: flex;
+            align-items: center;
+        }
+        .footer-item img {
+            margin-right: 10px;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                text-align: center;
+            }
+            .nav-links li {
+                margin: 10px 0;
+            }
+            .burger {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="formazione.png" alt="Logo Formazione Italia" class="logo">
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home Page</a></li>
+            <li><a href="chi-siamo.html">Chi Siamo</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+    </header>
+    <div class="content">
+        La mia azienda
+    </div>
+    <footer>
+        <div class="footer-item">
+            <img src="address-icon.png" alt="Indirizzo" width="20">
+            <span>Via della mia azienda, 1</span>
+        </div>
+        <div class="footer-item">
+            <img src="email-icon.png" alt="Email" width="20">
+            <span>email@miaazienda.it</span>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+</body>
+</html>

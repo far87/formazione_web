@@ -11,6 +11,35 @@
             padding: 0;
             font-family: Arial, sans-serif;
         }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .content1 {
+            position: relative;
+            z-index: 1;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('aula.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            filter: blur(2px); /* Aggiunge l'effetto di sfocatura */
+            z-index: -1; /* Posiziona l'immagine dietro il contenuto */
+        }
+
         header {
             background-color: #1C3D6D;
             color: #F07D22;
@@ -73,6 +102,7 @@
             display: flex;
             justify-content: space-between;
             padding: 10px 20px;
+            margin-top: auto;
         }
         .footer-item {
             display: flex;
@@ -107,7 +137,11 @@
             font-size: 2rem; /* Dimensiona l'icona in base alle tue esigenze */
             margin-bottom: 5px; /* Spazio tra l'icona e il testo */
         }
-
+        #benvenuto-text {
+            font-style: normal;
+            font-weight: bolder;
+            color: #fff8e7 ;
+         }
 
         @media (max-width: 768px) {
             .nav-links {
@@ -142,55 +176,74 @@
     </style>
 </head>
 <body>
-    <header>
-        <img src="formazione.png" alt="Logo della mia azienda" class="logo">
-        <br>
-        <div class="nav-container">
-            <ul class="nav-links">
-                <li><a href="">Corsi</a></li>
-                <li><a href="">La nostra Mission</a></li>
-                <li><a href="chi-siamo.html">Chi Siamo</a></li>
-                <li><a href="contatti.html">Contatti</a></li>
-            </ul>
-            <div class="burger" onclick="toggleMenu()">
-                <div></div>
-                <div></div>
-                <div></div>
+    <div class="background-image"></div>
+    <div class="content1">
+        <header>
+            <img src="formazione.png" alt="Logo della mia azienda" class="logo">
+            <br>
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="">Corsi</a></li>
+                    <li><a href="">La nostra Mission</a></li>
+                    <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+                <div class="burger" onclick="toggleMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
             </div>
+        </header>
+        <div class="content">
+
+            <div> </div>
+            <br>
+            <div> </div>
+            <div> </div>
+            <br>
+            <div> </div>
+            <div id="benvenuto-text">Benvenuto in Formazione Italia </div>
+            <br>
+            <div> </div>
+            <div> </div>
+            <br>
+            <div> </div>
+            <br>
+            <div> </div>
+            <div> </div>
+            <br>
+            <div> </div>
+            <br>
+            <div> </div>
+            <div> </div>
+            <br>
+            <div> </div>
+            <br>
+            <div> </div>
+            <div> </div>
+            <br>
+            <div> </div>
+
         </div>
-    </header>
-    <div class="content">
-        
-        <div> </div>
-        <br>
-        <div> </div>
-        <div> </div>
-        <br>
-        <div> </div>
-        <div>Benvenuto in Formazione Italia </div>
-        <br>
-        <div> </div>
-        <div> </div>
-        <br>
-        <div> </div>
+     <!--   <footer>
+            <div class="footer-item">
+                <div class="address-container">
+                    <span class="fas fa-map-marker-alt address-icon"></span>
+                    <br>
+                    <span id="address-text">Via Salvo D'Acquisto n. 73,
+                        Aversa CE</span>
+                </div>    
+            </div>
+            <div class="footer-item">
+                <div class="email-container">
+                    <span class="fas fa-envelope email-icon"></span>
+                    <br>
+                    <span id="email-text">formazioneitaliapro@gmail.com</span>
+                </div>    
+            </div>
+        </footer>-->
     </div>
-    <footer>
-        <div class="footer-item">
-            <div class="address-container">
-                <span class="fas fa-map-marker-alt address-icon"></span>
-                <br>
-                <span id="address-text">Via Salvo D'Acquisto n. 73,
-                    Aversa CE</span>
-            </div>    
-        </div>
-        <div class="footer-item">
-            <div class="email-container">
-                <span class="fas fa-envelope email-icon"></span>
-                <br>
-                <span id="email-text">formazioneitaliapro@gmail.com</span>
-            </div>    
-        </div>
-    </footer>
 
     <script>
         function toggleMenu() {
